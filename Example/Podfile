@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'RMPZoomTransitionAnimator', :exclusive => true do
+  pod "RMPZoomTransitionAnimator", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "RMPZoomTransitionAnimator", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
