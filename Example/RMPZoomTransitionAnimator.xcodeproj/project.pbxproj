@@ -130,7 +130,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53FAE1B01AC5442400BFCF5E /* Demo-Images */ = {
+		53FAE1B01AC5442400BFCF5E /* Demo Images */ = {
 			isa = PBXGroup;
 			children = (
 				53FAE1901AC5441F00BFCF5E /* 6.jpeg */,
@@ -150,7 +150,7 @@
 				53FAE19E1AC5441F00BFCF5E /* 13.jpeg */,
 				53FAE19F1AC5441F00BFCF5E /* 15.jpeg */,
 			);
-			name = "Demo-Images";
+			name = "Demo Images";
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -190,7 +190,7 @@
 		6003F593195388D20070C39A /* RMPZoomTransitionAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				53FAE1B01AC5442400BFCF5E /* Demo-Images */,
+				53FAE1B01AC5442400BFCF5E /* Demo Images */,
 				6003F59C195388D20070C39A /* RMPAppDelegate.h */,
 				6003F59D195388D20070C39A /* RMPAppDelegate.m */,
 				53FAE18C1AC5434500BFCF5E /* DemoCollectionViewController.h */,

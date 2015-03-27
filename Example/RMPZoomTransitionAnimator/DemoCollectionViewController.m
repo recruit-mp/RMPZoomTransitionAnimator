@@ -18,7 +18,7 @@
 
 @end
 
-@interface DemoCollectionViewController ()
+@interface DemoCollectionViewController ()<UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, copy) NSArray *images;
 
@@ -27,7 +27,7 @@
 @implementation DemoCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
-static const NSUInteger kImageCount = 16;
+static const CGFloat kCellMargin = 5;
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -52,7 +52,8 @@ static const NSUInteger kImageCount = 16;
 - (void)setupData
 {
     NSMutableArray *images = [NSMutableArray array];
-    for (int i = 1; i <= kImageCount ; i++) {
+    // we prepared 16 images for demo
+    for (int i = 1; i <= 16 ; i++) {
         NSString *filename = [NSString stringWithFormat:@"%d.jpeg", i];
         [images addObject:[UIImage imageNamed:filename]];
     }
@@ -67,7 +68,7 @@ static const NSUInteger kImageCount = 16;
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 16;
+    return [self.images count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,35 +82,17 @@ static const NSUInteger kImageCount = 16;
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
+#pragma mark <UICollectionViewDelegateFlowLayout>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat length = (CGRectGetWidth(self.view.frame) / 2) - (kCellMargin * 2);
+    return CGSizeMake(length, length);
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, kCellMargin, kCellMargin, kCellMargin);
 }
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

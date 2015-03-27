@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="-613" y="-43"/>
         </scene>
-        <!--UICollectionViewController-->
+        <!--Image List-->
         <scene sceneID="cfa-KL-66x">
             <objects>
                 <collectionViewController id="wWR-pV-8K2" customClass="DemoCollectionViewController" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="126" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-vZ-Jaz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-vZ-Jaz">
                                             <rect key="frame" x="0.0" y="0.0" width="126" height="109"/>
                                         </imageView>
                                     </subviews>
@@ -113,13 +113,13 @@
                             <outlet property="delegate" destination="wWR-pV-8K2" id="Rpo-1t-sba"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="UICollectionViewController" id="W54-dB-fYD"/>
+                    <navigationItem key="navigationItem" title="Image List" id="W54-dB-fYD"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTg-4D-swy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-215" y="-43"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Detail-->
         <scene sceneID="DMa-3O-Q3n">
             <objects>
                 <viewController id="Ryi-Zg-iXn" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k8A-6y-ydT"/>
+                    <navigationItem key="navigationItem" title="Image Detail" id="k8A-6y-ydT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0O-OQ-sw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
