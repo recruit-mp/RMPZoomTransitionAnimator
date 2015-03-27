@@ -7,6 +7,7 @@
 //
 
 #import "DemoCollectionViewController.h"
+#import "DemoDetailViewController.h"
 
 @interface ImageCell : UICollectionViewCell
 
@@ -58,6 +59,12 @@ static const CGFloat kCellMargin = 5;
         [images addObject:[UIImage imageNamed:filename]];
     }
     self.images = [images copy];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DemoDetailViewController *vc = segue.destinationViewController;
+    vc.index = [[[self.collectionView indexPathsForSelectedItems] firstObject] row];
 }
 
 #pragma mark <UICollectionViewDataSource>
