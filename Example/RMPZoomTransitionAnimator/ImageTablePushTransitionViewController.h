@@ -18,18 +18,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ImageTableViewCell.h"
+#import "ImageTableViewController.h"
+#import "RMPZoomTransitionAnimator.h"
 
-@implementation ImageTableViewCell
+// How to setup
+//
+// 1. Import RMPZoomTransitionAnimator.h
+// 2. Adopt RMPZoomTransitionAnimating
+// 3. Implement RMPZoomTransitionAnimating protocol
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
+@interface ImageTablePushTransitionViewController : ImageTableViewController<RMPZoomTransitionAnimating>
 
 @end
