@@ -18,6 +18,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
+// How to setup
+// 
+// 1. Import RMPZoomTransitionAnimator.h
+// 2. Adopt RMPZoomTransitionAnimating
+// 3. Implement RMPZoomTransitionAnimating protocol
+
 #import "ImageCollectionViewController.h"
 #import "RMPZoomTransitionAnimator.h"
 

@@ -142,6 +142,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53BA63181ACA9E2D0075D2AC /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53BA63091ACA97500075D2AC /* ImageCollectionViewController.h */,
+				53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */,
+				53BA630C1ACA98060075D2AC /* ImageCollectionViewCell.h */,
+				53BA630D1ACA98060075D2AC /* ImageCollectionViewCell.m */,
+				53BA630F1ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.h */,
+				53BA63101ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m */,
+				53BA63121ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.h */,
+				53BA63131ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m */,
+			);
+			name = CollectionViewController;
+			sourceTree = "<group>";
+		};
 		53FAE1B01AC5442400BFCF5E /* Demo Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,14 +222,7 @@
 				6003F59D195388D20070C39A /* AppDelegate.m */,
 				53BA63031ACA7C2A0075D2AC /* NavigationController.h */,
 				53BA63041ACA7C2A0075D2AC /* NavigationController.m */,
-				53BA63091ACA97500075D2AC /* ImageCollectionViewController.h */,
-				53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */,
-				53BA630C1ACA98060075D2AC /* ImageCollectionViewCell.h */,
-				53BA630D1ACA98060075D2AC /* ImageCollectionViewCell.m */,
-				53BA630F1ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.h */,
-				53BA63101ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m */,
-				53BA63121ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.h */,
-				53BA63131ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m */,
+				53BA63181ACA9E2D0075D2AC /* CollectionViewController */,
 				53BA63061ACA8F380075D2AC /* DetailViewController.h */,
 				53BA63071ACA8F380075D2AC /* DetailViewController.m */,
 				53BA63151ACA9D940075D2AC /* Main_iPad.storyboard */,

@@ -20,20 +20,8 @@
 
 #import "ImageCollectionPushTransitionViewController.h"
 #import "ImageCollectionViewCell.h"
-#import "DetailViewController.h"
-
-@interface ImageCollectionPushTransitionViewController ()
-
-@end
 
 @implementation ImageCollectionPushTransitionViewController
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    DetailViewController *vc = segue.destinationViewController;
-    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-    vc.index = selectedIndexPath.row;
-}
 
 #pragma mark <RMPZoomTransitionAnimating>
 

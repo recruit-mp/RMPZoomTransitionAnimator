@@ -20,6 +20,7 @@
 
 #import "ImageCollectionViewController.h"
 #import "ImageCollectionViewCell.h"
+#import "DetailViewController.h"
 
 @interface ImageCollectionViewController ()<UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate>
 
@@ -62,6 +63,13 @@ static const CGFloat kCellMargin = 5;
         [images addObject:[UIImage imageNamed:filename]];
     }
     self.images = [images copy];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController *vc = segue.destinationViewController;
+    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+    vc.index = selectedIndexPath.row;
 }
 
 #pragma mark <UICollectionViewDataSource>

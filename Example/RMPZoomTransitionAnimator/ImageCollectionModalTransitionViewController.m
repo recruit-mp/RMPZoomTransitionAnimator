@@ -20,7 +20,6 @@
 
 #import "ImageCollectionModalTransitionViewController.h"
 #import "ImageCollectionViewCell.h"
-#import "DetailViewController.h"
 
 @interface ImageCollectionModalTransitionViewController ()<UIViewControllerTransitioningDelegate>
 
@@ -30,13 +29,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    DetailViewController *vc = segue.destinationViewController;
+    [super prepareForSegue:segue sender:sender];
+    UIViewController *vc = segue.destinationViewController;
     vc.transitioningDelegate = self;
-    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-    vc.index = selectedIndexPath.row;
 }
 
-#pragma mark <RMPZoomTransitionAnimating>
+#pragma mark - <RMPZoomTransitionAnimating>
 
 - (UIImageView *)transitionSourceImageView
 {
@@ -63,7 +61,7 @@
     return cellFrameInSuperview;
 }
 
-#pragma mark <UIViewControllerTransitioningDelegate>
+#pragma mark - <UIViewControllerTransitioningDelegate>
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting
