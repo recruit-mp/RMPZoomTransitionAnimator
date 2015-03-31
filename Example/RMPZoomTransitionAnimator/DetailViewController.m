@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filename = [NSString stringWithFormat:@"%ld.jpeg", self.index + 1];
+    NSString *filename = [NSString stringWithFormat:@"%02ld_L.jpeg", self.index + 1];
     UIImage *image = [UIImage imageNamed:filename];
     self.mainImageView.image = image;
     self.titleLabel.text = filename;

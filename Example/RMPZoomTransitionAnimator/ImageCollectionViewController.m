@@ -59,7 +59,7 @@ static const CGFloat kCellMargin = 5;
     NSMutableArray *images = [NSMutableArray array];
     // we prepared 16 images for demo
     for (int i = 1; i <= 16 ; i++) {
-        NSString *filename = [NSString stringWithFormat:@"%d.jpeg", i];
+        NSString *filename = [NSString stringWithFormat:@"%02d_S.jpeg", i];
         [images addObject:[UIImage imageNamed:filename]];
     }
     self.images = [images copy];
