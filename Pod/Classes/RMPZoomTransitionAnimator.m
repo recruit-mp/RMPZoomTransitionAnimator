@@ -22,4 +22,92 @@
 
 @implementation RMPZoomTransitionAnimator
 
+// constants for transition animation
+static const NSTimeInterval kForwardAnimationDuration         = 0.3;
+static const NSTimeInterval kForwardCompleteAnimationDuration = 0.2;
+static const NSTimeInterval kBackwardAnimationDuration         = 0.25;
+static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
+
+#pragma mark - <UIViewControllerAnimatedTransitioning>
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
+{
+    if (self.goingForward) {
+        return kForwardAnimationDuration + kForwardCompleteAnimationDuration;
+    } else {
+        return kBackwardAnimationDuration + kBackwardCompleteAnimationDuration;
+    }
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    // Setup for animation transition
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC   = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *containerView    = [transitionContext containerView];
+    [containerView addSubview:fromVC.view];
+    [containerView addSubview:toVC.view];
+    
+    // Without animation when you have not confirm the protocol
+    Protocol *animating = @protocol(RMPZoomTransitionAnimating);
+    BOOL doesNotConfirmProtocol = ![self.sourceTransition conformsToProtocol:animating] || ![self.destinationTransition conformsToProtocol:animating];
+    if (doesNotConfirmProtocol) {
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+        return;
+    }
+    
+    // Add a alphaView To be overexposed, so background becomes dark in animation
+    UIView *alphaView = [[UIView alloc] initWithFrame:[transitionContext finalFrameForViewController:toVC]];
+    alphaView.backgroundColor = [self.sourceTransition transitionSourceBackgroundColor];
+    [containerView addSubview:alphaView];
+    
+    // Transition source of image to move me to add to the last
+    UIImageView *sourceImageView = [self.sourceTransition transitionSourceImageView];
+    [containerView addSubview:sourceImageView];
+    
+    if (self.goingForward) {
+        [UIView animateWithDuration:kForwardAnimationDuration
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             sourceImageView.frame = [self.destinationTransition transitionDestinationImageViewFrame];
+                             sourceImageView.transform = CGAffineTransformMakeScale(1.02, 1.02);
+                             alphaView.alpha = 0.9;
+                         }
+                         completion:^(BOOL finished) {
+                             [UIView animateWithDuration:kForwardCompleteAnimationDuration
+                                                   delay:0
+                                                 options:UIViewAnimationOptionCurveEaseOut
+                                              animations:^{
+                                                  alphaView.alpha = 0;
+                                                  sourceImageView.transform = CGAffineTransformIdentity;
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  sourceImageView.alpha = 0;
+                                                  [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                                              }];
+                         }];
+        
+    } else {
+        [UIView animateWithDuration:kBackwardAnimationDuration
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             sourceImageView.frame = [self.destinationTransition transitionDestinationImageViewFrame];
+                             alphaView.alpha = 0;
+                         }
+                         completion:^(BOOL finished) {
+                             [UIView animateWithDuration:kBackwardCompleteAnimationDuration
+                                                   delay:0
+                                                 options:UIViewAnimationOptionCurveEaseOut
+                                              animations:^{
+                                                  sourceImageView.alpha = 0;
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                                              }];
+                         }];
+    }
+}
+
 @end

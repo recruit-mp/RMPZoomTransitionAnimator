@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E4194D5681A505F70E7A1BB /* libPods-RMPZoomTransitionAnimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */; };
+		53BA63051ACA7C2A0075D2AC /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */; };
 		53FAE18E1AC5434500BFCF5E /* DemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */; };
 		53FAE1A01AC5441F00BFCF5E /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE1901AC5441F00BFCF5E /* 6.jpeg */; };
 		53FAE1A11AC5441F00BFCF5E /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE1911AC5441F00BFCF5E /* 7.jpeg */; };
@@ -57,6 +58,8 @@
 /* Begin PBXFileReference section */
 		12FBB227FBCD0144243152E0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1B69EDB8CC7B6AC4978072E6 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BA63031ACA7C2A0075D2AC /* DemoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
+		53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationController.m; sourceTree = "<group>"; };
 		53FAE18C1AC5434500BFCF5E /* DemoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewController.h; sourceTree = "<group>"; };
 		53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewController.m; sourceTree = "<group>"; };
 		53FAE1901AC5441F00BFCF5E /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				53FAE1B01AC5442400BFCF5E /* Demo Images */,
 				6003F59C195388D20070C39A /* RMPAppDelegate.h */,
 				6003F59D195388D20070C39A /* RMPAppDelegate.m */,
+				53BA63031ACA7C2A0075D2AC /* DemoNavigationController.h */,
+				53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */,
 				53FAE18C1AC5434500BFCF5E /* DemoCollectionViewController.h */,
 				53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */,
 				53FAE1B11AC561FE00BFCF5E /* DemoDetailViewController.h */,
@@ -443,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53BA63051ACA7C2A0075D2AC /* DemoNavigationController.m in Sources */,
 				6003F59E195388D20070C39A /* RMPAppDelegate.m in Sources */,
 				53FAE18E1AC5434500BFCF5E /* DemoCollectionViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* RMPViewController.m in Sources */,
@@ -587,6 +593,7 @@
 				GCC_PREFIX_HEADER = "RMPZoomTransitionAnimator/RMPZoomTransitionAnimator-Prefix.pch";
 				INFOPLIST_FILE = "RMPZoomTransitionAnimator/RMPZoomTransitionAnimator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -601,6 +608,7 @@
 				GCC_PREFIX_HEADER = "RMPZoomTransitionAnimator/RMPZoomTransitionAnimator-Prefix.pch";
 				INFOPLIST_FILE = "RMPZoomTransitionAnimator/RMPZoomTransitionAnimator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

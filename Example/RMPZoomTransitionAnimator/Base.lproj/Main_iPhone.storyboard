@@ -75,7 +75,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fY2-HD-RgL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.98026315789473684" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.94228846304692393" blue="0.87853836380914374" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oZK-Qb-FGu">
                             <size key="itemSize" width="126" height="109"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -154,7 +154,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="0.98026315789999996" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jEp-cD-jQK" firstAttribute="leading" secondItem="df5-R5-bUP" secondAttribute="leadingMargin" id="3zb-Qu-ms0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qKk-qB-v1B" secondAttribute="trailing" constant="-16" id="68u-rB-d5s"/>
@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="175" y="-43"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Demo Navigation Controller-->
         <scene sceneID="JiG-Tg-jJM">
             <objects>
-                <navigationController id="6cm-mI-V1z" sceneMemberID="viewController">
+                <navigationController id="6cm-mI-V1z" customClass="DemoNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cu7-Vb-Iuk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
