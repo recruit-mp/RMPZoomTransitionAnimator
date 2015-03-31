@@ -9,30 +9,30 @@
 
 Pod::Spec.new do |s|
   s.name             = "RMPZoomTransitionAnimator"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of RMPZoomTransitionAnimator."
+  s.version          = "1.0.0"
+  s.summary          = "A custom zooming transition animation for UIViewController"
   s.description      = <<-DESC
-                       An optional longer description of RMPZoomTransitionAnimator
+                       `RMPZoomTransitionAnimator`
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/RMPZoomTransitionAnimator"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/recruit-mp/RMPZoomTransitionAnimator"
+  s.screenshots      = "https://raw.githubusercontent.com/recruit-mp/RMPZoomTransitionAnimator/master/docs/rmpscrollingmenubarcontroller.gif"
   s.license          = 'MIT'
-  s.author           = { "Masato Ohshima" => "m_ohshima@r.recruit.co.jp" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/RMPZoomTransitionAnimator.git", :tag => s.version.to_s }
+  s.author           = { "Recruit Marketing Partners Co.,Ltd." => "recruit_mp_oss@ml.cocorou.jp" }
+  s.source           = { :git => "https://github.com/recruit-mp/RMPZoomTransitionAnimator.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Pod/Classes'
   s.resource_bundles = {
     'RMPZoomTransitionAnimator' => ['Pod/Assets/*.png']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

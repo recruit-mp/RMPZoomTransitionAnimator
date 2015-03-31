@@ -58,7 +58,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)setupData
 {
     NSMutableArray *images = [NSMutableArray array];
-    // we prepared 16 images for demo
+    // we prepared 16 images for example
     for (int i = 1; i <= 16 ; i++) {
         NSString *filename = [NSString stringWithFormat:@"%02d_S.jpeg", i];
         NSDictionary *info = @{
