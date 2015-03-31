@@ -383,13 +383,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-AV-ta1">
-                                <rect key="frame" x="0.0" y="70" width="320" height="248"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="QzT-Hg-FrC"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUv-8R-aVn">
-                                <rect key="frame" x="16" y="336" width="288" height="55"/>
+                                <rect key="frame" x="16" y="328" width="288" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="ACs-va-60K"/>
                                 </constraints>
@@ -398,7 +398,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9v-n5-lfe">
-                                <rect key="frame" x="16" y="399" width="288" height="148"/>
+                                <rect key="frame" x="16" y="391" width="288" height="156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -425,7 +425,7 @@
                             <constraint firstItem="gUv-8R-aVn" firstAttribute="trailing" secondItem="jFO-cl-ys9" secondAttribute="trailingMargin" id="Kx2-nb-UKx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5eZ-AV-ta1" secondAttribute="trailing" constant="-16" id="Ma0-mp-9z5"/>
                             <constraint firstItem="gUv-8R-aVn" firstAttribute="top" secondItem="5eZ-AV-ta1" secondAttribute="bottom" constant="18" id="TNa-Hs-Kdt"/>
-                            <constraint firstItem="5eZ-AV-ta1" firstAttribute="top" secondItem="V7b-35-kN9" secondAttribute="bottom" constant="20" id="Twv-42-ree"/>
+                            <constraint firstItem="5eZ-AV-ta1" firstAttribute="top" secondItem="V7b-35-kN9" secondAttribute="bottom" constant="12" id="Twv-42-ree"/>
                             <constraint firstItem="5eZ-AV-ta1" firstAttribute="leading" secondItem="jFO-cl-ys9" secondAttribute="leadingMargin" constant="-16" id="UeF-4E-EqD"/>
                             <constraint firstItem="gUv-8R-aVn" firstAttribute="leading" secondItem="jFO-cl-ys9" secondAttribute="leadingMargin" id="YOi-n0-5xr"/>
                             <constraint firstItem="V7b-35-kN9" firstAttribute="top" secondItem="vrd-vt-Mlk" secondAttribute="bottom" id="bJz-y6-Zzb"/>
@@ -573,13 +573,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tG0-KT-l7v">
-                                <rect key="frame" x="0.0" y="70" width="320" height="248"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="EFp-NO-YTh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-jA-vTh">
-                                <rect key="frame" x="16" y="336" width="288" height="55"/>
+                                <rect key="frame" x="16" y="328" width="288" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="ZTw-pF-yMB"/>
                                 </constraints>
@@ -588,7 +588,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oww-5O-ykE">
-                                <rect key="frame" x="16" y="399" width="288" height="148"/>
+                                <rect key="frame" x="16" y="391" width="288" height="156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -622,7 +622,7 @@
                             <constraint firstItem="DDx-FW-aKZ" firstAttribute="top" secondItem="oww-5O-ykE" secondAttribute="bottom" constant="21" id="KHV-dl-lCC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tG0-KT-l7v" secondAttribute="trailing" constant="-16" id="Ktn-t5-rdf"/>
                             <constraint firstItem="oww-5O-ykE" firstAttribute="trailing" secondItem="WOa-gb-qOy" secondAttribute="trailingMargin" id="coA-Qc-84W"/>
-                            <constraint firstItem="tG0-KT-l7v" firstAttribute="top" secondItem="39s-S4-H6E" secondAttribute="bottom" constant="20" id="sIJ-hS-n0O"/>
+                            <constraint firstItem="tG0-KT-l7v" firstAttribute="top" secondItem="39s-S4-H6E" secondAttribute="bottom" constant="12" id="sIJ-hS-n0O"/>
                         </constraints>
                     </view>
                     <connections>
