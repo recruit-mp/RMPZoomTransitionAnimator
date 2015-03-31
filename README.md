@@ -9,6 +9,7 @@
 `RMPZoomTransitionAnimator` provide a custom transition zooming animation.
 
 Not only `UICollectionView`, this is possible to use any other `UIViewController` transition.
+
 This transition animation is like the "Pinterest" animation, but this is very simple and small library.
 
 ![Screen shot](docs/collectionview.gif)
@@ -31,6 +32,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Setup is as below:
 
 ### Use for an UINavigationController push transition
+
+Refer to the example project for details.
 
 - Import `RMPZoomTransitionAnimator.h`
 - Adopt `RMPZoomTransitionAnimating`
@@ -55,9 +58,9 @@ Setup is as below:
 }
 ```
 
-Refer to the example project for details.
-
 ### Use for a modal transition
+
+Refer to the example project for details.
 
 - Import `RMPZoomTransitionAnimator.h`
 - Adopt `RMPZoomTransitionAnimating`
