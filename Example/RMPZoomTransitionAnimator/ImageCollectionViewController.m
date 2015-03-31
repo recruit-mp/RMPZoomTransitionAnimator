@@ -60,7 +60,12 @@ static const CGFloat kCellMargin = 5;
     // we prepared 16 images for demo
     for (int i = 1; i <= 16 ; i++) {
         NSString *filename = [NSString stringWithFormat:@"%02d_S.jpeg", i];
-        [images addObject:[UIImage imageNamed:filename]];
+        NSDictionary *info = @{
+                               @"filename": filename,
+                               @"image"   : [UIImage imageNamed:filename]
+                               };
+        
+        [images addObject:info];
     }
     self.images = [images copy];
 }
@@ -87,9 +92,9 @@ static const CGFloat kCellMargin = 5;
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    NSString *filename = [NSString stringWithFormat:@"%ld.jpeg", indexPath.row + 1];
-    UIImage *image = [UIImage imageNamed:filename];
-    cell.imageView.image = image;
+    NSDictionary *info = self.images[indexPath.row];
+    cell.imageView.image = info[@"image"];
+    cell.titleLabel.text = info[@"filename"];
     
     return cell;
 }
