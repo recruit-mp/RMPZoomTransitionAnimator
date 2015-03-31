@@ -19,10 +19,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "RMPZoomTransitionAnimator.h"
 
-@interface DemoDetailViewController : UIViewController<RMPZoomTransitionAnimating>
-
-@property (nonatomic) NSUInteger index;
+@interface ImageCollectionViewController : UICollectionViewController
 
 @end

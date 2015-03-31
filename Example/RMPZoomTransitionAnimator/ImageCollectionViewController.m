@@ -18,26 +18,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DemoCollectionViewController.h"
-#import "DemoDetailViewController.h"
+#import "ImageCollectionViewController.h"
+#import "ImageCollectionViewCell.h"
 
-@interface ImageCell : UICollectionViewCell
-
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
-
-@end
-
-@implementation ImageCell
-
-@end
-
-@interface DemoCollectionViewController ()<UICollectionViewDelegateFlowLayout>
+@interface ImageCollectionViewController ()<UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, copy) NSArray *images;
 
 @end
 
-@implementation DemoCollectionViewController
+@implementation ImageCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 static const CGFloat kCellMargin = 5;
@@ -61,7 +51,7 @@ static const CGFloat kCellMargin = 5;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (void)setupData
 {
@@ -72,39 +62,6 @@ static const CGFloat kCellMargin = 5;
         [images addObject:[UIImage imageNamed:filename]];
     }
     self.images = [images copy];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    DemoDetailViewController *vc = segue.destinationViewController;
-    vc.index = [[[self.collectionView indexPathsForSelectedItems] firstObject] row];
-}
-
-#pragma mark <RMPZoomTransitionAnimating>
-
-- (UIImageView *)transitionSourceImageView
-{
-    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-    ImageCell *cell = (ImageCell *)[self.collectionView cellForItemAtIndexPath:selectedIndexPath];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:cell.imageView.image];
-    imageView.contentMode = cell.imageView.contentMode;
-    imageView.clipsToBounds = YES;
-    imageView.userInteractionEnabled = NO;
-    imageView.frame = [cell.imageView convertRect:cell.imageView.frame toView:self.collectionView.superview];
-    return imageView;
-}
-
-- (UIColor *)transitionSourceBackgroundColor
-{
-    return self.collectionView.backgroundColor;
-}
-
-- (CGRect)transitionDestinationImageViewFrame
-{
-    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-    ImageCell *cell = (ImageCell *)[self.collectionView cellForItemAtIndexPath:selectedIndexPath];
-    CGRect cellFrameInSuperview = [cell.imageView convertRect:cell.imageView.frame toView:self.collectionView.superview];
-    return cellFrameInSuperview;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -119,7 +76,7 @@ static const CGFloat kCellMargin = 5;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
     NSString *filename = [NSString stringWithFormat:@"%ld.jpeg", indexPath.row + 1];

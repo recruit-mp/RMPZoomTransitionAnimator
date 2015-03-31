@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E4194D5681A505F70E7A1BB /* libPods-RMPZoomTransitionAnimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */; };
-		53BA63051ACA7C2A0075D2AC /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */; };
-		53FAE18E1AC5434500BFCF5E /* DemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */; };
+		53BA63051ACA7C2A0075D2AC /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63041ACA7C2A0075D2AC /* NavigationController.m */; };
+		53BA63081ACA8F380075D2AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63071ACA8F380075D2AC /* DetailViewController.m */; };
+		53BA630B1ACA97500075D2AC /* ImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */; };
+		53BA630E1ACA98060075D2AC /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA630D1ACA98060075D2AC /* ImageCollectionViewCell.m */; };
+		53BA63111ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63101ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m */; };
+		53BA63141ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63131ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m */; };
+		53BA63171ACA9D940075D2AC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BA63151ACA9D940075D2AC /* Main_iPad.storyboard */; };
 		53FAE1A01AC5441F00BFCF5E /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE1901AC5441F00BFCF5E /* 6.jpeg */; };
 		53FAE1A11AC5441F00BFCF5E /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE1911AC5441F00BFCF5E /* 7.jpeg */; };
 		53FAE1A21AC5441F00BFCF5E /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE1921AC5441F00BFCF5E /* 9.jpeg */; };
@@ -26,7 +31,6 @@
 		53FAE1AD1AC5441F00BFCF5E /* 11.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE19D1AC5441F00BFCF5E /* 11.jpeg */; };
 		53FAE1AE1AC5441F00BFCF5E /* 13.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE19E1AC5441F00BFCF5E /* 13.jpeg */; };
 		53FAE1AF1AC5441F00BFCF5E /* 15.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53FAE19F1AC5441F00BFCF5E /* 15.jpeg */; };
-		53FAE1B31AC561FE00BFCF5E /* DemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FAE1B21AC561FE00BFCF5E /* DemoDetailViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -34,7 +38,6 @@
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
 		6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F59F195388D20070C39A /* Main_iPhone.storyboard */; };
-		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -57,10 +60,19 @@
 /* Begin PBXFileReference section */
 		12FBB227FBCD0144243152E0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1B69EDB8CC7B6AC4978072E6 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53BA63031ACA7C2A0075D2AC /* DemoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
-		53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationController.m; sourceTree = "<group>"; };
-		53FAE18C1AC5434500BFCF5E /* DemoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewController.h; sourceTree = "<group>"; };
-		53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewController.m; sourceTree = "<group>"; };
+		53BA63031ACA7C2A0075D2AC /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		53BA63041ACA7C2A0075D2AC /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		53BA63061ACA8F380075D2AC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		53BA63071ACA8F380075D2AC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		53BA63091ACA97500075D2AC /* ImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewController.h; sourceTree = "<group>"; };
+		53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewController.m; sourceTree = "<group>"; };
+		53BA630C1ACA98060075D2AC /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		53BA630D1ACA98060075D2AC /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		53BA630F1ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionPushTransitionViewController.h; sourceTree = "<group>"; };
+		53BA63101ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionPushTransitionViewController.m; sourceTree = "<group>"; };
+		53BA63121ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionModalTransitionViewController.h; sourceTree = "<group>"; };
+		53BA63131ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionModalTransitionViewController.m; sourceTree = "<group>"; };
+		53BA63161ACA9D940075D2AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RMPZoomTransitionAnimator/Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		53FAE1901AC5441F00BFCF5E /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
 		53FAE1911AC5441F00BFCF5E /* 7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpeg; sourceTree = "<group>"; };
 		53FAE1921AC5441F00BFCF5E /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
@@ -77,8 +89,6 @@
 		53FAE19D1AC5441F00BFCF5E /* 11.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpeg; sourceTree = "<group>"; };
 		53FAE19E1AC5441F00BFCF5E /* 13.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpeg; sourceTree = "<group>"; };
 		53FAE19F1AC5441F00BFCF5E /* 15.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpeg; sourceTree = "<group>"; };
-		53FAE1B11AC561FE00BFCF5E /* DemoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoDetailViewController.h; sourceTree = "<group>"; };
-		53FAE1B21AC561FE00BFCF5E /* DemoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoDetailViewController.m; sourceTree = "<group>"; };
 		56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMPZoomTransitionAnimator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* RMPZoomTransitionAnimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMPZoomTransitionAnimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,7 +101,6 @@
 		6003F59C195388D20070C39A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6003F5A0195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		6003F5A3195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -196,14 +205,20 @@
 				53FAE1B01AC5442400BFCF5E /* Demo Images */,
 				6003F59C195388D20070C39A /* AppDelegate.h */,
 				6003F59D195388D20070C39A /* AppDelegate.m */,
-				53BA63031ACA7C2A0075D2AC /* DemoNavigationController.h */,
-				53BA63041ACA7C2A0075D2AC /* DemoNavigationController.m */,
-				53FAE18C1AC5434500BFCF5E /* DemoCollectionViewController.h */,
-				53FAE18D1AC5434500BFCF5E /* DemoCollectionViewController.m */,
-				53FAE1B11AC561FE00BFCF5E /* DemoDetailViewController.h */,
-				53FAE1B21AC561FE00BFCF5E /* DemoDetailViewController.m */,
+				53BA63031ACA7C2A0075D2AC /* NavigationController.h */,
+				53BA63041ACA7C2A0075D2AC /* NavigationController.m */,
+				53BA63091ACA97500075D2AC /* ImageCollectionViewController.h */,
+				53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */,
+				53BA630C1ACA98060075D2AC /* ImageCollectionViewCell.h */,
+				53BA630D1ACA98060075D2AC /* ImageCollectionViewCell.m */,
+				53BA630F1ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.h */,
+				53BA63101ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m */,
+				53BA63121ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.h */,
+				53BA63131ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m */,
+				53BA63061ACA8F380075D2AC /* DetailViewController.h */,
+				53BA63071ACA8F380075D2AC /* DetailViewController.m */,
+				53BA63151ACA9D940075D2AC /* Main_iPad.storyboard */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
-				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -347,11 +362,11 @@
 				53FAE1A31AC5441F00BFCF5E /* 14.jpeg in Resources */,
 				53FAE1AB1AC5441F00BFCF5E /* 16.jpeg in Resources */,
 				53FAE1A91AC5441F00BFCF5E /* 10.jpeg in Resources */,
+				53BA63171ACA9D940075D2AC /* Main_iPad.storyboard in Resources */,
 				53FAE1AE1AC5441F00BFCF5E /* 13.jpeg in Resources */,
 				53FAE1A01AC5441F00BFCF5E /* 6.jpeg in Resources */,
 				53FAE1A11AC5441F00BFCF5E /* 7.jpeg in Resources */,
 				53FAE1AA1AC5441F00BFCF5E /* 8.jpeg in Resources */,
-				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				53FAE1A41AC5441F00BFCF5E /* 1.jpeg in Resources */,
 				53FAE1AD1AC5441F00BFCF5E /* 11.jpeg in Resources */,
 				53FAE1A51AC5441F00BFCF5E /* 5.jpeg in Resources */,
@@ -443,11 +458,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53BA63051ACA7C2A0075D2AC /* DemoNavigationController.m in Sources */,
+				53BA63051ACA7C2A0075D2AC /* NavigationController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
-				53FAE18E1AC5434500BFCF5E /* DemoCollectionViewController.m in Sources */,
-				53FAE1B31AC561FE00BFCF5E /* DemoDetailViewController.m in Sources */,
+				53BA63141ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				53BA63081ACA8F380075D2AC /* DetailViewController.m in Sources */,
+				53BA63111ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m in Sources */,
+				53BA630E1ACA98060075D2AC /* ImageCollectionViewCell.m in Sources */,
+				53BA630B1ACA97500075D2AC /* ImageCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +488,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		53BA63151ACA9D940075D2AC /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53BA63161ACA9D940075D2AC /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -484,14 +511,6 @@
 				6003F5A0195388D20070C39A /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6003F5A2195388D20070C39A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A3195388D20070C39A /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {

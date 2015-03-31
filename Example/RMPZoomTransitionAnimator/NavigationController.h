@@ -19,8 +19,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "RMPZoomTransitionAnimator.h"
 
-@interface DemoCollectionViewController : UICollectionViewController<RMPZoomTransitionAnimating>
+@interface NavigationController : UINavigationController
 
 @end

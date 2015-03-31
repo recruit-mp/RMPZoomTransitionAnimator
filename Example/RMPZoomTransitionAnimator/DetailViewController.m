@@ -18,19 +18,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DemoNavigationController.h"
-#import "RMPZoomTransitionAnimator.h"
+#import "DetailViewController.h"
 
-@interface DemoNavigationController ()<UINavigationControllerDelegate>
+@interface DetailViewController ()
+
+@property (nonatomic, weak) IBOutlet UIImageView *mainImageView;
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 
 @end
 
-@implementation DemoNavigationController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.delegate = self;
+    NSString *filename = [NSString stringWithFormat:@"%ld.jpeg", self.index + 1];
+    UIImage *image = [UIImage imageNamed:filename];
+    self.mainImageView.image = image;
+    self.titleLabel.text = filename;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,24 +43,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - <UINavigationControllerDelegate>
+#pragma mark - <RMPZoomTransitionAnimating>
 
-- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                   animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                fromViewController:(UIViewController *)fromVC
-                                                  toViewController:(UIViewController *)toVC
+- (UIImageView *)transitionSourceImageView
 {
-    id <RMPZoomTransitionAnimating> sourceTransition = (id<RMPZoomTransitionAnimating>)fromVC;
-    id <RMPZoomTransitionAnimating> destinationTransition = (id<RMPZoomTransitionAnimating>)toVC;
-    if ([sourceTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
-        [destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)]) {
-        RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
-        animator.goingForward = (operation == UINavigationControllerOperationPush);
-        animator.sourceTransition = sourceTransition;
-        animator.destinationTransition = destinationTransition;
-        return animator;
-    }
-    return nil;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:self.mainImageView.image];
+    imageView.contentMode = self.mainImageView.contentMode;
+    imageView.clipsToBounds = YES;
+    imageView.userInteractionEnabled = NO;
+    imageView.frame = self.mainImageView.frame;
+    return imageView;
+}
+
+- (UIColor *)transitionSourceBackgroundColor
+{
+    return self.view.backgroundColor;
+}
+
+- (CGRect)transitionDestinationImageViewFrame
+{
+    return self.mainImageView.frame;
+}
+
+#pragma mark - 
+
+- (IBAction)closeButtonDidPush:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
