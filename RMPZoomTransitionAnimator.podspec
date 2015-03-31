@@ -12,17 +12,16 @@ Pod::Spec.new do |s|
   s.version          = "1.0.0"
   s.summary          = "A custom zooming transition animation for UIViewController"
   s.description      = <<-DESC
-                       `RMPZoomTransitionAnimator`
+`RMPZoomTransitionAnimator` provide a custom transition zooming animation.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+Not only `UICollectionView`, this is possible to use any other `UIViewController` transition.
+This transition animation is like the "Pinterest" animation, but this is very simple and small library.
                        DESC
   s.homepage         = "https://github.com/recruit-mp/RMPZoomTransitionAnimator"
-  s.screenshots      = "https://raw.githubusercontent.com/recruit-mp/RMPZoomTransitionAnimator/master/docs/rmpscrollingmenubarcontroller.gif"
+  s.screenshots      = "https://raw.githubusercontent.com/recruit-mp/RMPZoomTransitionAnimator/master/docs/collectionview.gif"
   s.license          = 'MIT'
   s.author           = { "Recruit Marketing Partners Co.,Ltd." => "recruit_mp_oss@ml.cocorou.jp" }
   s.source           = { :git => "https://github.com/recruit-mp/RMPZoomTransitionAnimator.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -32,7 +31,5 @@ Pod::Spec.new do |s|
     'RMPZoomTransitionAnimator' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

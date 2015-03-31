@@ -8,7 +8,8 @@
 
 `RMPZoomTransitionAnimator` provide a custom transition zooming animation.
 
-Not only `UICollectionViewController`, it is possible to use any other `UIViewController`.
+Not only `UICollectionView`, this is possible to use any other `UIViewController` transition.
+This transition animation is like the "Pinterest" animation, but this is very simple and small library.
 
 ![Screen shot](docs/collectionview.gif)
 ![Screen shot](docs/tableview.gif)
@@ -29,40 +30,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 Setup is as below:
 
-### Use for a UINavigationController push transition
+### Use for an UINavigationController push transition
 
 - Import `RMPZoomTransitionAnimator.h`
 - Adopt `RMPZoomTransitionAnimating`
-- Implement the `RMPZoomTransitionAnimating` protocol to source view controller and destination view controller
-
-```objective-c
-/**
-Before the animation occurs, return the UIImageView of transition source view controller.
-
-You should create a new UIImageView object again, so this UIImageView is moving.
-
-@return source view controller's UIImageView before transition.
-*/
-- (UIImageView *)transitionSourceImageView;
-
-/**
-Return background color in source view controller.
-
-This color will be used for fade in animation.
-we recommend the background color of source view controller.
-
-@return source view controller's bacground color
-*/
-- (UIColor *)transitionSourceBackgroundColor;
-
-/**
-Returns the UIImageView’s rectangle in a destination view controller.
-
-@return destination view controller's frame for UIImageView
-*/
-- (CGRect)transitionDestinationImageViewFrame;
-```
-
+- Implement the `RMPZoomTransitionAnimating` protocol below, both source view controller and destination view controller
+  1. `- (UIImageView *)transitionSourceImageView`
+  2. `- (UIColor *)transitionSourceBackgroundColor`
+  3. `- (CGRect)transitionDestinationImageViewFrame`
 - Returns RMPZoomTransitionAnimator instance in the UINavigationController delegate method
 
 ```objective-c
@@ -71,6 +46,7 @@ Returns the UIImageView’s rectangle in a destination view controller.
                                                 fromViewController:(UIViewController *)fromVC
                                                   toViewController:(UIViewController *)toVC
 {
+    // minimum implementation for example
     RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
     animator.goingForward = (operation == UINavigationControllerOperationPush);
     animator.sourceTransition = (id<RMPZoomTransitionAnimating>)fromVC;
@@ -79,12 +55,17 @@ Returns the UIImageView’s rectangle in a destination view controller.
 }
 ```
 
+Refer to the example project for details.
+
 ### Use for a modal transition
 
-- Import RMPZoomTransitionAnimator.h
-- Adopt RMPZoomTransitionAnimating
-- Implement RMPZoomTransitionAnimating protocol
-- Set the transitioningDelegate in `prepareForSegue:sender`:
+- Import `RMPZoomTransitionAnimator.h`
+- Adopt `RMPZoomTransitionAnimating`
+- Implement `RMPZoomTransitionAnimating` protocol below, both source view controller and destination view controller
+  1. `- (UIImageView *)transitionSourceImageView`
+  2. `- (UIColor *)transitionSourceBackgroundColor`
+  3. `- (CGRect)transitionDestinationImageViewFrame`
+- Set the transitioningDelegate in `prepareForSegue:sender:`
 - Returns RMPZoomTransitionAnimator instance in the UIViewControllerTransitioningDelegate method
 
 ```objective-c
@@ -92,6 +73,7 @@ Returns the UIImageView’s rectangle in a destination view controller.
                                                                   presentingController:(UIViewController *)presenting
                                                                       sourceController:(UIViewController *)source
 {
+    // minimum implementation for example
     RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
     animator.goingForward = YES;
     animator.sourceTransition = (id<RMPZoomTransitionAnimating>)source;
@@ -101,6 +83,7 @@ Returns the UIImageView’s rectangle in a destination view controller.
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
+    // minimum implementation for example
     RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
     animator.goingForward = NO;
     animator.sourceTransition = (id<RMPZoomTransitionAnimating>)dismissed;
