@@ -308,12 +308,12 @@
 		6003F593195388D20070C39A /* RMPZoomTransitionAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				53BA635C1ACAAB4A0075D2AC /* TableViewController */,
 				6003F59C195388D20070C39A /* AppDelegate.h */,
 				6003F59D195388D20070C39A /* AppDelegate.m */,
 				53BA63031ACA7C2A0075D2AC /* NavigationController.h */,
 				53BA63041ACA7C2A0075D2AC /* NavigationController.m */,
 				53BA63181ACA9E2D0075D2AC /* CollectionViewController */,
+				53BA635C1ACAAB4A0075D2AC /* TableViewController */,
 				53BA63061ACA8F380075D2AC /* DetailViewController.h */,
 				53BA63071ACA8F380075D2AC /* DetailViewController.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
