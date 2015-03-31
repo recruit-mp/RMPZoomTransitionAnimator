@@ -18,16 +18,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 // How to setup
 //
 // 1. Import RMPZoomTransitionAnimator.h
 // 2. Adopt RMPZoomTransitionAnimating
 // 3. Implement RMPZoomTransitionAnimating protocol
+// 4. Set the transitioningDelegate in prepareForSegue:sender:
+// 5. Implement UIViewControllerTransitioningDelegate protocol
 
 #import "ImageTableViewController.h"
 #import "RMPZoomTransitionAnimator.h"
 
-@interface ImageTablePushTransitionViewController : ImageTableViewController<RMPZoomTransitionAnimating>
+@interface ImageTableModalTransitionViewController : ImageTableViewController<RMPZoomTransitionAnimating>
 
 @end
