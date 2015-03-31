@@ -10,7 +10,8 @@
 
 Not only `UICollectionViewController`, it is possible to use any other `UIViewController`.
 
-![Screen shot](docs/RMPZoomTransitionAnimator.gif)
+![Screen shot](docs/collectionview.gif)
+![Screen shot](docs/tableview.gif)
 
 ## Installation
 
