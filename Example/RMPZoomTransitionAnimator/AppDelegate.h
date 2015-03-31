@@ -20,7 +20,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMPAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
