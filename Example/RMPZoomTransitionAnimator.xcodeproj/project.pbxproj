@@ -47,6 +47,8 @@
 		53BA63591ACAA40E0075D2AC /* 14_S.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53BA63391ACAA40E0075D2AC /* 14_S.jpeg */; };
 		53BA635A1ACAA40E0075D2AC /* 15_S.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53BA633A1ACAA40E0075D2AC /* 15_S.jpeg */; };
 		53BA635B1ACAA40E0075D2AC /* 16_S.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 53BA633B1ACAA40E0075D2AC /* 16_S.jpeg */; };
+		53BA635F1ACAAB630075D2AC /* ImageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA635E1ACAAB630075D2AC /* ImageTableViewController.m */; };
+		53BA63621ACAAB7F0075D2AC /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63611ACAAB7F0075D2AC /* ImageTableViewCell.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -121,6 +123,10 @@
 		53BA63391ACAA40E0075D2AC /* 14_S.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14_S.jpeg; sourceTree = "<group>"; };
 		53BA633A1ACAA40E0075D2AC /* 15_S.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15_S.jpeg; sourceTree = "<group>"; };
 		53BA633B1ACAA40E0075D2AC /* 16_S.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16_S.jpeg; sourceTree = "<group>"; };
+		53BA635D1ACAAB630075D2AC /* ImageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewController.h; sourceTree = "<group>"; };
+		53BA635E1ACAAB630075D2AC /* ImageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewController.m; sourceTree = "<group>"; };
+		53BA63601ACAAB7F0075D2AC /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		53BA63611ACAAB7F0075D2AC /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMPZoomTransitionAnimator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* RMPZoomTransitionAnimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMPZoomTransitionAnimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -244,6 +250,17 @@
 			path = S;
 			sourceTree = "<group>";
 		};
+		53BA635C1ACAAB4A0075D2AC /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53BA635D1ACAAB630075D2AC /* ImageTableViewController.h */,
+				53BA635E1ACAAB630075D2AC /* ImageTableViewController.m */,
+				53BA63601ACAAB7F0075D2AC /* ImageTableViewCell.h */,
+				53BA63611ACAAB7F0075D2AC /* ImageTableViewCell.m */,
+			);
+			name = TableViewController;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +298,7 @@
 		6003F593195388D20070C39A /* RMPZoomTransitionAnimator */ = {
 			isa = PBXGroup;
 			children = (
+				53BA635C1ACAAB4A0075D2AC /* TableViewController */,
 				6003F59C195388D20070C39A /* AppDelegate.h */,
 				6003F59D195388D20070C39A /* AppDelegate.m */,
 				53BA63031ACA7C2A0075D2AC /* NavigationController.h */,
@@ -549,9 +567,11 @@
 				53BA63051ACA7C2A0075D2AC /* NavigationController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				53BA63141ACA9A800075D2AC /* ImageCollectionModalTransitionViewController.m in Sources */,
+				53BA635F1ACAAB630075D2AC /* ImageTableViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				53BA63081ACA8F380075D2AC /* DetailViewController.m in Sources */,
 				53BA63111ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m in Sources */,
+				53BA63621ACAAB7F0075D2AC /* ImageTableViewCell.m in Sources */,
 				53BA630E1ACA98060075D2AC /* ImageCollectionViewCell.m in Sources */,
 				53BA630B1ACA97500075D2AC /* ImageCollectionViewController.m in Sources */,
 			);
