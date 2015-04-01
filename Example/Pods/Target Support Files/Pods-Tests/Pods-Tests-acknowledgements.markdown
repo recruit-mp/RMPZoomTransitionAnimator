@@ -85,7 +85,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## RMPZoomTransitionAnimator
 
-Copyright (c) 2015 Masato Ohshima <m_ohshima@r.recruit.co.jp>
+Copyright (c) 2015 Recruit Marketing Partners Co.,Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
