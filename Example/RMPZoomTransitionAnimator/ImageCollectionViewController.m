@@ -103,7 +103,12 @@ static const CGFloat kCellMargin = 5;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    BOOL isPad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
     CGFloat length = (CGRectGetWidth(self.view.frame) / 2) - (kCellMargin * 2);
+    if (isPad) {
+        // fixed size for iPad in landscape and portrait
+        length = 256 - (kCellMargin * 2);
+    }
     return CGSizeMake(length, length);
 }
 
