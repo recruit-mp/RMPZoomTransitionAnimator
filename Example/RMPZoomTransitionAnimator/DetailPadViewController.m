@@ -18,55 +18,43 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DetailViewController.h"
+#import "DetailPadViewController.h"
 
-@interface DetailViewController ()
+@interface DetailPadViewController ()
+
+@property (nonatomic, weak) IBOutlet UITextView *descriptionView;
 
 @end
 
-@implementation DetailViewController
+@implementation DetailPadViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filename = [NSString stringWithFormat:@"%02u_L.jpeg", self.index + 1];
-    UIImage *image = [UIImage imageNamed:filename];
-    self.mainImageView.image = image;
-    self.titleLabel.text = filename;
+    [self resizeView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - <RMPZoomTransitionAnimating>
-
-- (UIImageView *)transitionSourceImageView
+- (void)viewDidLayoutSubviews
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:self.mainImageView.image];
-    imageView.contentMode = self.mainImageView.contentMode;
-    imageView.clipsToBounds = YES;
-    imageView.userInteractionEnabled = NO;
-    imageView.frame = self.mainImageView.frame;
-    return imageView;
-}
-
-- (UIColor *)transitionSourceBackgroundColor
-{
-    return self.view.backgroundColor;
-}
-
-- (CGRect)transitionDestinationImageViewFrame
-{
-    return self.mainImageView.frame;
+    [self resizeView];
 }
 
 #pragma mark - 
 
-- (IBAction)closeButtonDidPush:(id)sender
+- (void)resizeView
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    BOOL isLandscape = UIInterfaceOrientationIsLandscape(orientation);
+    
+    // we set fixed frame without auto layout so iPad has fixed display size.
+    self.mainImageView.frame = CGRectMake(16, 82, 736, 552);
+    if (isLandscape) {
+        self.titleLabel.frame = CGRectMake(802, 82, 206, 54);
+        self.descriptionView.frame = CGRectMake(802, 144, 206, 604);
+    } else {
+        self.titleLabel.frame = CGRectMake(16, 656, 144, 54);
+        self.descriptionView.frame = CGRectMake(16, 746, 736, 254);
+    }
 }
 
 @end

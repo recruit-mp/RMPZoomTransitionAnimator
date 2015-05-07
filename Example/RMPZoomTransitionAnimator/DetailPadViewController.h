@@ -18,14 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "RMPZoomTransitionAnimator.h"
+#import "DetailViewController.h"
 
-@interface DetailViewController : UIViewController<RMPZoomTransitionAnimating>
-
-@property (nonatomic) NSUInteger index;
-
-@property (nonatomic, weak) IBOutlet UIImageView *mainImageView;
-@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@interface DetailPadViewController : DetailViewController
 
 @end

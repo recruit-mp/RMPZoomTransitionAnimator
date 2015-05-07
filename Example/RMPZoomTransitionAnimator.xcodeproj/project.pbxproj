@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E4194D5681A505F70E7A1BB /* libPods-RMPZoomTransitionAnimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */; };
+		5347C3B91AF346FD00E99597 /* DetailPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5347C3B81AF346FD00E99597 /* DetailPadViewController.m */; };
 		53BA63051ACA7C2A0075D2AC /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63041ACA7C2A0075D2AC /* NavigationController.m */; };
 		53BA63081ACA8F380075D2AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63071ACA8F380075D2AC /* DetailViewController.m */; };
 		53BA630B1ACA97500075D2AC /* ImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA630A1ACA97500075D2AC /* ImageCollectionViewController.m */; };
@@ -80,6 +81,8 @@
 /* Begin PBXFileReference section */
 		12FBB227FBCD0144243152E0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1B69EDB8CC7B6AC4978072E6 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5347C3B71AF346FD00E99597 /* DetailPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPadViewController.h; sourceTree = "<group>"; };
+		5347C3B81AF346FD00E99597 /* DetailPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPadViewController.m; sourceTree = "<group>"; };
 		53BA63031ACA7C2A0075D2AC /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		53BA63041ACA7C2A0075D2AC /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		53BA63061ACA8F380075D2AC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				53BA635C1ACAAB4A0075D2AC /* TableViewController */,
 				53BA63061ACA8F380075D2AC /* DetailViewController.h */,
 				53BA63071ACA8F380075D2AC /* DetailViewController.m */,
+				5347C3B71AF346FD00E99597 /* DetailPadViewController.h */,
+				5347C3B81AF346FD00E99597 /* DetailPadViewController.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
 				53BA63151ACA9D940075D2AC /* Main_iPad.storyboard */,
 				53BA63191ACAA40E0075D2AC /* Demo Images */,
@@ -585,6 +590,7 @@
 				53BA63111ACA98DD0075D2AC /* ImageCollectionPushTransitionViewController.m in Sources */,
 				53BA63621ACAAB7F0075D2AC /* ImageTableViewCell.m in Sources */,
 				53BA630E1ACA98060075D2AC /* ImageCollectionViewCell.m in Sources */,
+				5347C3B91AF346FD00E99597 /* DetailPadViewController.m in Sources */,
 				53BA630B1ACA97500075D2AC /* ImageCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
