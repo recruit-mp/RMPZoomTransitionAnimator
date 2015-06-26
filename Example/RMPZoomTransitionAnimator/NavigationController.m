@@ -45,8 +45,8 @@
                                                 fromViewController:(UIViewController *)fromVC
                                                   toViewController:(UIViewController *)toVC
 {
-    id <RMPZoomTransitionAnimating> sourceTransition = (id<RMPZoomTransitionAnimating>)fromVC;
-    id <RMPZoomTransitionAnimating> destinationTransition = (id<RMPZoomTransitionAnimating>)toVC;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)fromVC;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)toVC;
     if ([sourceTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
         [destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)]) {
         RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];

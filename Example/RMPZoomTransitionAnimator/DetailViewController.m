@@ -30,8 +30,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSString *filename = [NSString stringWithFormat:@"%02u_L.jpeg", self.index + 1];
-    UIImage *image = [UIImage imageNamed:filename];
-    self.mainImageView.image = image;
     self.titleLabel.text = filename;
 }
 
@@ -60,6 +58,10 @@
 - (CGRect)transitionDestinationImageViewFrame
 {
     return self.mainImageView.frame;
+}
+
+- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator didCompleteTransition:(BOOL)didComplete animatingSourceImageView:(UIImageView *)imageView {
+    self.mainImageView.image = imageView.image;
 }
 
 #pragma mark - 

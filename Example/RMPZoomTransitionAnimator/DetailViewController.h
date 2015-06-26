@@ -21,7 +21,7 @@
 #import <UIKit/UIKit.h>
 #import "RMPZoomTransitionAnimator.h"
 
-@interface DetailViewController : UIViewController<RMPZoomTransitionAnimating>
+@interface DetailViewController : UIViewController<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>
 
 @property (nonatomic) NSUInteger index;
 

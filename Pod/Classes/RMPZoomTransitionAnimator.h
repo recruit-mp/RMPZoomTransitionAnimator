@@ -58,6 +58,14 @@
 
 @end
 
+@class RMPZoomTransitionAnimator;
+
+@protocol RMPZoomTransitionDelegate <NSObject>
+@optional
+
+- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator didCompleteTransition:(BOOL)didComplete animatingSourceImageView:(UIImageView *)imageView;
+@end
+
 @interface RMPZoomTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
@@ -70,13 +78,13 @@
  
  You need to set this property and implement the RMPZoomTransitionAnimating in source view controller.
 */
-@property (nonatomic, weak) id <RMPZoomTransitionAnimating> sourceTransition;
+@property (nonatomic, weak) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition;
 
 /**
  The animator's delegate for transition in destination view controller.
  
  You need to set this property and implement the RMPZoomTransitionAnimating in destination view controller.
  */
-@property (nonatomic, weak) id <RMPZoomTransitionAnimating> destinationTransition;
+@property (nonatomic, weak) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition;
 
 @end
