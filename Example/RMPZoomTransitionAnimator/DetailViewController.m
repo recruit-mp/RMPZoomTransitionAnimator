@@ -60,7 +60,12 @@
     return self.mainImageView.frame;
 }
 
-- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator didCompleteTransition:(BOOL)didComplete animatingSourceImageView:(UIImageView *)imageView {
+#pragma mark - <RMPZoomTransitionDelegate>
+
+- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator
+         didCompleteTransition:(BOOL)didComplete
+      animatingSourceImageView:(UIImageView *)imageView
+{
     self.mainImageView.image = imageView.image;
 }
 
