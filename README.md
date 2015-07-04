@@ -99,6 +99,14 @@ Refer to the example project for details.
 
 - iOS 7.0 or higher 
 
+## Change Log
+
+### 1.0.1
+- Adds animation completion handler
+
+### 1.0.0
+- First release.
+
 ## Contribution
 
 If you have feature requests or bug reports, feel free to help out by sending pull requests or by creating new issues.
