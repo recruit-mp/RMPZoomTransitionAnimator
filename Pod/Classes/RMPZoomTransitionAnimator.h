@@ -20,6 +20,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class RMPZoomTransitionAnimator;
+
 /**
  You need to adopt the RMPZoomTransitionAnimating protocol in source view controller and destination
  view controller to make transition animations.
@@ -58,14 +60,32 @@
 
 @end
 
-@class RMPZoomTransitionAnimator;
 
+/**
+ Delegate handler of viewController which implements transitioning protocol
+ */
 @protocol RMPZoomTransitionDelegate <NSObject>
 @optional
 
-- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator didCompleteTransition:(BOOL)didComplete animatingSourceImageView:(UIImageView *)imageView;
+/**
+ Notify the end of the forward and backward animations.
+ 
+ get the original UIImageView and hide it, while the copy is being animated.
+ And when the animation is done, the original could be shown.
+ That will prevent the original views to be shown while animating.
+ */
+- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator
+         didCompleteTransition:(BOOL)didComplete
+      animatingSourceImageView:(UIImageView *)imageView;
+
 @end
 
+
+/**
+ Animator object that implements UIViewControllerAnimatedTransitioning
+ 
+ You need to return this object in transition delegate method
+ */
 @interface RMPZoomTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**

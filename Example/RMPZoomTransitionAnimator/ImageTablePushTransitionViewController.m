@@ -38,8 +38,8 @@
     imageView.clipsToBounds = YES;
     imageView.userInteractionEnabled = NO;
     CGRect frameInSuperview = [cell.thumbImageView convertRect:cell.thumbImageView.frame toView:self.tableView.superview];
-    frameInSuperview.origin.x -= [cell.thumbImageView layoutMargins].left;
-    frameInSuperview.origin.y -= [cell.thumbImageView layoutMargins].top;
+    frameInSuperview.origin.x -= cell.layoutMargins.left;
+    frameInSuperview.origin.y -= cell.layoutMargins.top;
     imageView.frame = frameInSuperview;
     return imageView;
 }
@@ -54,8 +54,8 @@
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     ImageTableViewCell *cell = (ImageTableViewCell *)[self.tableView cellForRowAtIndexPath:selectedIndexPath];
     CGRect frameInSuperview = [cell.thumbImageView convertRect:cell.thumbImageView.frame toView:self.tableView.superview];
-    frameInSuperview.origin.x -= [cell.thumbImageView layoutMargins].left;
-    frameInSuperview.origin.y -= [cell.thumbImageView layoutMargins].top;
+    frameInSuperview.origin.x -= cell.layoutMargins.left;
+    frameInSuperview.origin.y -= cell.layoutMargins.top;
     return frameInSuperview;
 }
 

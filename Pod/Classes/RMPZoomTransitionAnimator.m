@@ -86,7 +86,9 @@ static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
                                                   sourceImageView.alpha = 0;
                                                   if ([self.destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
                                                       [self.destinationTransition respondsToSelector:@selector(zoomTransitionAnimator:didCompleteTransition:animatingSourceImageView:)]) {
-                                                      [self.destinationTransition zoomTransitionAnimator:self didCompleteTransition:![transitionContext transitionWasCancelled] animatingSourceImageView:sourceImageView];
+                                                      [self.destinationTransition zoomTransitionAnimator:self
+                                                                                   didCompleteTransition:![transitionContext transitionWasCancelled]
+                                                                                animatingSourceImageView:sourceImageView];
                                                   }
                                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                                               }];
@@ -110,7 +112,9 @@ static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
                                               completion:^(BOOL finished) {
                                                   if ([self.destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
                                                       [self.destinationTransition respondsToSelector:@selector(zoomTransitionAnimator:didCompleteTransition:animatingSourceImageView:)]) {
-                                                      [self.destinationTransition zoomTransitionAnimator:self didCompleteTransition:![transitionContext transitionWasCancelled] animatingSourceImageView:sourceImageView];
+                                                      [self.destinationTransition zoomTransitionAnimator:self
+                                                                                   didCompleteTransition:![transitionContext transitionWasCancelled]
+                                                                                animatingSourceImageView:sourceImageView];
                                                   }
                                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                                               }];

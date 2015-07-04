@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filename = [NSString stringWithFormat:@"%02u_L.jpeg", self.index + 1];
+    NSString *filename = [NSString stringWithFormat:@"%02lu_L.jpeg", self.index + 1];
     self.titleLabel.text = filename;
 }
 
@@ -60,7 +60,12 @@
     return self.mainImageView.frame;
 }
 
-- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator didCompleteTransition:(BOOL)didComplete animatingSourceImageView:(UIImageView *)imageView {
+#pragma mark - <RMPZoomTransitionDelegate>
+
+- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator
+         didCompleteTransition:(BOOL)didComplete
+      animatingSourceImageView:(UIImageView *)imageView
+{
     self.mainImageView.image = imageView.image;
 }
 

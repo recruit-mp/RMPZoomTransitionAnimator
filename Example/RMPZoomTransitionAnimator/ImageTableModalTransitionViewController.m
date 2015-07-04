@@ -48,8 +48,8 @@
     imageView.clipsToBounds = YES;
     imageView.userInteractionEnabled = NO;
     CGRect frameInSuperview = [cell.thumbImageView convertRect:cell.thumbImageView.frame toView:self.tableView.superview];
-    frameInSuperview.origin.x -= [cell.thumbImageView layoutMargins].left;
-    frameInSuperview.origin.y -= [cell.thumbImageView layoutMargins].top;
+    frameInSuperview.origin.x -= cell.layoutMargins.left;
+    frameInSuperview.origin.y -= cell.layoutMargins.top;
     imageView.frame = frameInSuperview;
     return imageView;
 }
@@ -64,8 +64,8 @@
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     ImageTableViewCell *cell = (ImageTableViewCell *)[self.tableView cellForRowAtIndexPath:selectedIndexPath];
     CGRect frameInSuperview = [cell.thumbImageView convertRect:cell.thumbImageView.frame toView:self.tableView.superview];
-    frameInSuperview.origin.x -= [cell.thumbImageView layoutMargins].left;
-    frameInSuperview.origin.y -= [cell.thumbImageView layoutMargins].top;
+    frameInSuperview.origin.x -= cell.layoutMargins.left;
+    frameInSuperview.origin.y -= cell.layoutMargins.top;
     return frameInSuperview;
 }
 
@@ -83,8 +83,8 @@
                                                                   presentingController:(UIViewController *)presenting
                                                                       sourceController:(UIViewController *)source
 {
-    id <RMPZoomTransitionAnimating> sourceTransition = (id<RMPZoomTransitionAnimating>)source;
-    id <RMPZoomTransitionAnimating> destinationTransition = (id<RMPZoomTransitionAnimating>)presented;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)source;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)presented;
     if ([sourceTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
         [destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)]) {
         RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
@@ -98,8 +98,8 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    id <RMPZoomTransitionAnimating> sourceTransition = (id<RMPZoomTransitionAnimating>)dismissed;
-    id <RMPZoomTransitionAnimating> destinationTransition = (id<RMPZoomTransitionAnimating>)self;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)dismissed;
+    id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition = (id<RMPZoomTransitionAnimating, RMPZoomTransitionDelegate>)self;
     if ([sourceTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
         [destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)]) {
         RMPZoomTransitionAnimator *animator = [[RMPZoomTransitionAnimator alloc] init];
