@@ -91,6 +91,10 @@ static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
                                                                                 animatingSourceImageView:sourceImageView];
                                                   }
                                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                                                  
+                                                  // Remove the views from superviews to release the references
+                                                  [alphaView removeFromSuperview];
+                                                  [sourceImageView removeFromSuperview];
                                               }];
                          }];
         
@@ -117,6 +121,10 @@ static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
                                                                                 animatingSourceImageView:sourceImageView];
                                                   }
                                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                                                  
+                                                  // Remove the views from superviews to release the references
+                                                  [alphaView removeFromSuperview];
+                                                  [sourceImageView removeFromSuperview];
                                               }];
                          }];
     }
