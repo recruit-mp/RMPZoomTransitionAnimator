@@ -52,6 +52,7 @@
 		53BA63621ACAAB7F0075D2AC /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63611ACAAB7F0075D2AC /* ImageTableViewCell.m */; };
 		53BA63651ACAB1AE0075D2AC /* ImageTablePushTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63641ACAB1AE0075D2AC /* ImageTablePushTransitionViewController.m */; };
 		53BA63681ACAB8F60075D2AC /* ImageTableModalTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BA63671ACAB8F60075D2AC /* ImageTableModalTransitionViewController.m */; };
+		53FF3ADE1C6F657500DD356D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FF3ADC1C6F657500DD356D /* LaunchScreen.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -136,6 +137,7 @@
 		53BA63641ACAB1AE0075D2AC /* ImageTablePushTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTablePushTransitionViewController.m; sourceTree = "<group>"; };
 		53BA63661ACAB8F60075D2AC /* ImageTableModalTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableModalTransitionViewController.h; sourceTree = "<group>"; };
 		53BA63671ACAB8F60075D2AC /* ImageTableModalTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableModalTransitionViewController.m; sourceTree = "<group>"; };
+		53FF3ADD1C6F657500DD356D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RMPZoomTransitionAnimator/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CBD9157286BBDB03CAFACD /* libPods-RMPZoomTransitionAnimator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMPZoomTransitionAnimator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* RMPZoomTransitionAnimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMPZoomTransitionAnimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -333,6 +335,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53FF3ADC1C6F657500DD356D /* LaunchScreen.storyboard */,
 				6003F595195388D20070C39A /* RMPZoomTransitionAnimator-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -493,6 +496,7 @@
 				53BA63531ACAA40E0075D2AC /* 08_S.jpeg in Resources */,
 				53BA63591ACAA40E0075D2AC /* 14_S.jpeg in Resources */,
 				53BA63461ACAA40E0075D2AC /* 11_L.jpeg in Resources */,
+				53FF3ADE1C6F657500DD356D /* LaunchScreen.storyboard in Resources */,
 				53BA634A1ACAA40E0075D2AC /* 15_L.jpeg in Resources */,
 				53BA63501ACAA40E0075D2AC /* 05_S.jpeg in Resources */,
 				53BA63551ACAA40E0075D2AC /* 10_S.jpeg in Resources */,
@@ -620,6 +624,15 @@
 				53BA63161ACA9D940075D2AC /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		53FF3ADC1C6F657500DD356D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53FF3ADD1C6F657500DD356D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			path = ..;
 			sourceTree = "<group>";
 		};
