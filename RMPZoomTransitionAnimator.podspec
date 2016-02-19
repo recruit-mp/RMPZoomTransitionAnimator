@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RMPZoomTransitionAnimator"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "A custom zooming transition animation for UIViewController"
   s.description      = <<-DESC
 `RMPZoomTransitionAnimator` provide a custom transition zooming animation.
