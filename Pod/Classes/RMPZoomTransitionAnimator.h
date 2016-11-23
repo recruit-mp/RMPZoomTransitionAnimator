@@ -89,6 +89,11 @@
 @interface RMPZoomTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
+ Changes default animation duration.
+ */
++ (void)setAnimationDurationForward:(NSTimeInterval)forward forwardComplete:(NSTimeInterval)forwardComplete backward:(NSTimeInterval)backward backwardComplete:(NSTimeInterval)backwardComplete;
+
+/**
  A Boolean value that determines whether transition animation is going forward.
  */
 @property (nonatomic) BOOL goingForward;

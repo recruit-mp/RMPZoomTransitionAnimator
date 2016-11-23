@@ -23,10 +23,18 @@
 @implementation RMPZoomTransitionAnimator
 
 // constants for transition animation
-static const NSTimeInterval kForwardAnimationDuration         = 0.3;
-static const NSTimeInterval kForwardCompleteAnimationDuration = 0.2;
-static const NSTimeInterval kBackwardAnimationDuration         = 0.25;
-static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
+static NSTimeInterval kForwardAnimationDuration         = 0.3;
+static NSTimeInterval kForwardCompleteAnimationDuration = 0.2;
+static NSTimeInterval kBackwardAnimationDuration         = 0.25;
+static NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
+
++ (void)setAnimationDurationForward:(NSTimeInterval)forward forwardComplete:(NSTimeInterval)forwardComplete backward:(NSTimeInterval)backward backwardComplete:(NSTimeInterval)backwardComplete
+{
+    kForwardAnimationDuration = forward;
+    kForwardCompleteAnimationDuration = forwardComplete;
+    kBackwardAnimationDuration = backward;
+    kBackwardCompleteAnimationDuration = backwardComplete;
+}
 
 #pragma mark - <UIViewControllerAnimatedTransitioning>
 
