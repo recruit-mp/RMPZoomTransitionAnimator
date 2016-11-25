@@ -89,6 +89,19 @@
 @interface RMPZoomTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
+ Init component with custom animation durations.
+ */
+- (RMPZoomTransitionAnimator * _Nonnull)initWithAnimationDurationForward:(NSTimeInterval)forward
+                                                         forwardComplete:(NSTimeInterval)forwardComplete
+                                                                backward:(NSTimeInterval)backward
+                                                        backwardComplete:(NSTimeInterval)backwardComplete;
+
+/**
+ Changes default animation duration. Primarily here for subclassing.
+ */
+- (void)setDefaultAnimationDuration;
+
+/**
  A Boolean value that determines whether transition animation is going forward.
  */
 @property (nonatomic) BOOL goingForward;
