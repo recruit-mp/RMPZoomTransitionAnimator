@@ -104,6 +104,9 @@
     [containerView addSubview:sourceImageView];
     
     if (self.goingForward) {
+        
+        [fromVC beginAppearanceTransition:NO animated:YES];
+        
         [UIView animateWithDuration:kForwardAnimationDuration
                               delay:0
                             options:UIViewAnimationOptionCurveEaseOut
@@ -133,6 +136,8 @@
                                                   // Remove the views from superviews to release the references
                                                   [alphaView removeFromSuperview];
                                                   [sourceImageView removeFromSuperview];
+                                                  
+                                                  [fromVC endAppearanceTransition];
                                               }];
                          }];
         
