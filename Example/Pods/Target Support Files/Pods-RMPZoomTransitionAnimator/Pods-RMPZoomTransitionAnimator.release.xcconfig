@@ -1,6 +1,9 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/Expecta+Snapshots" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/RMPZoomTransitionAnimator" "${PODS_ROOT}/Headers/Public/Specta"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Expecta" -isystem "${PODS_ROOT}/Headers/Public/Expecta+Snapshots" -isystem "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" -isystem "${PODS_ROOT}/Headers/Public/RMPZoomTransitionAnimator" -isystem "${PODS_ROOT}/Headers/Public/Specta"
-OTHER_LDFLAGS = -ObjC -l"Pods-RMPZoomTransitionAnimator-RMPZoomTransitionAnimator" -framework "UIKit"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/RMPZoomTransitionAnimator"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/RMPZoomTransitionAnimator"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/RMPZoomTransitionAnimator"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"RMPZoomTransitionAnimator" -framework "UIKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods

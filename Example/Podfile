@@ -1,14 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, 7.0
 
-target 'RMPZoomTransitionAnimator', :exclusive => true do
+target 'RMPZoomTransitionAnimator' do
   pod "RMPZoomTransitionAnimator", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+target 'Tests' do
   pod "RMPZoomTransitionAnimator", :path => "../"
-
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
 end
