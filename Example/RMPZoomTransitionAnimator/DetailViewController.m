@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filename = [NSString stringWithFormat:@"%02lu_L.jpeg", self.index + 1];
+    NSString *filename = [NSString stringWithFormat:@"%02u_L.jpeg", self.index + 1];
     self.titleLabel.text = filename;
 }
 
