@@ -101,6 +101,13 @@ Refer to the example project for details.
 
 ## Change Log
 
+### 1.0.3
+- Add option to change default animation duration
+- Fixed black screen
+
+### 1.0.2
+- Remove alpha view and source image view from superview when completed
+
 ### 1.0.1
 - Adds animation completion handler
 
@@ -113,6 +120,7 @@ If you have feature requests or bug reports, feel free to help out by sending pu
 
 ## Author
 
+[Masato Oshima](https://github.com/mpon)
 Recruit Marketing Partners Co.,Ltd. recruit_mp_oss@ml.cocorou.jp
 
 ## License
