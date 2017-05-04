@@ -27,9 +27,6 @@ This transition animation is like the "Pinterest" animation, but this is very si
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'RMPZoomTransitionAnimator' => ['Pod/Assets/*.png']
-  }
 
   s.frameworks = 'UIKit'
 end

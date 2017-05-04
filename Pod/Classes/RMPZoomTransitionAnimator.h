@@ -39,7 +39,7 @@
  
  @return source view controller's UIImageView before transition.
  */
-- (UIImageView *)transitionSourceImageView;
+- (nonnull UIImageView *)transitionSourceImageView;
 
 /**
  Return background color in source view controller.
@@ -49,7 +49,7 @@
  
  @return source view controller's bacground color
  */
-- (UIColor *)transitionSourceBackgroundColor;
+- (nonnull UIColor *)transitionSourceBackgroundColor;
 
 /**
  Returns the UIImageView’s rectangle in a destination view controller.
@@ -74,9 +74,9 @@
  And when the animation is done, the original could be shown.
  That will prevent the original views to be shown while animating.
  */
-- (void)zoomTransitionAnimator:(RMPZoomTransitionAnimator *)animator
+- (void)zoomTransitionAnimator:(nonnull RMPZoomTransitionAnimator *)animator
          didCompleteTransition:(BOOL)didComplete
-      animatingSourceImageView:(UIImageView *)imageView;
+      animatingSourceImageView:(nonnull UIImageView *)imageView;
 
 @end
 
@@ -91,7 +91,7 @@
 /**
  Init component with custom animation durations.
  */
-- (RMPZoomTransitionAnimator * _Nonnull)initWithAnimationDurationForward:(NSTimeInterval)forward
+- (nonnull RMPZoomTransitionAnimator *)initWithAnimationDurationForward:(NSTimeInterval)forward
                                                          forwardComplete:(NSTimeInterval)forwardComplete
                                                                 backward:(NSTimeInterval)backward
                                                         backwardComplete:(NSTimeInterval)backwardComplete;
@@ -111,13 +111,13 @@
  
  You need to set this property and implement the RMPZoomTransitionAnimating in source view controller.
 */
-@property (nonatomic, weak) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition;
+@property (nonatomic, weak, nullable) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> sourceTransition;
 
 /**
  The animator's delegate for transition in destination view controller.
  
  You need to set this property and implement the RMPZoomTransitionAnimating in destination view controller.
  */
-@property (nonatomic, weak) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition;
+@property (nonatomic, weak, nullable) id <RMPZoomTransitionAnimating, RMPZoomTransitionDelegate> destinationTransition;
 
 @end
