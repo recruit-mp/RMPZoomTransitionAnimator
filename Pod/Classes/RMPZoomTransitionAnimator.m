@@ -164,9 +164,6 @@
                                                                                 animatingSourceImageView:sourceImageView];
                                                   }
                                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-                                                  if(![[UIApplication sharedApplication].keyWindow.subviews containsObject:toVC.view]) {
-                                                      [[UIApplication sharedApplication].keyWindow addSubview:toVC.view];
-                                                  }
                                                   // Remove the views from superviews to release the references
                                                   [alphaView removeFromSuperview];
                                                   [sourceImageView removeFromSuperview];
