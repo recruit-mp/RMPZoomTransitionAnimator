@@ -60,10 +60,10 @@
  instead of repeatability having to use the convenience init method.
  */
 - (void)setDefaultAnimationDuration {
-    kForwardAnimationDuration = 0.3;
+    kForwardAnimationDuration = 0.45;
     kForwardCompleteAnimationDuration = 0.2;
-    kBackwardAnimationDuration = 0.25;
-    kBackwardCompleteAnimationDuration = 0.18;
+    kBackwardAnimationDuration = 0.45;
+    kBackwardCompleteAnimationDuration = 0;
 }
 
 #pragma mark - <UIViewControllerAnimatedTransitioning>
@@ -150,24 +150,16 @@
                              alphaView.alpha = 0;
                          }
                          completion:^(BOOL finished) {
-                             [UIView animateWithDuration:kBackwardCompleteAnimationDuration
-                                                   delay:0
-                                                 options:UIViewAnimationOptionCurveEaseOut
-                                              animations:^{
-                                                  sourceImageView.alpha = 0;
-                                              }
-                                              completion:^(BOOL finished) {
-                                                  if ([self.destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
-                                                      [self.destinationTransition respondsToSelector:@selector(zoomTransitionAnimator:didCompleteTransition:animatingSourceImageView:)]) {
-                                                      [self.destinationTransition zoomTransitionAnimator:self
-                                                                                   didCompleteTransition:![transitionContext transitionWasCancelled]
-                                                                                animatingSourceImageView:sourceImageView];
-                                                  }
-                                                  [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-                                                  // Remove the views from superviews to release the references
-                                                  [alphaView removeFromSuperview];
-                                                  [sourceImageView removeFromSuperview];
-                                              }];
+                             if ([self.destinationTransition conformsToProtocol:@protocol(RMPZoomTransitionAnimating)] &&
+                                 [self.destinationTransition respondsToSelector:@selector(zoomTransitionAnimator:didCompleteTransition:animatingSourceImageView:)]) {
+                                 [self.destinationTransition zoomTransitionAnimator:self
+                                                              didCompleteTransition:![transitionContext transitionWasCancelled]
+                                                           animatingSourceImageView:sourceImageView];
+                             }
+                             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                             // Remove the views from superviews to release the references
+                             [alphaView removeFromSuperview];
+                             [sourceImageView removeFromSuperview];
                          }];
     }
 }
